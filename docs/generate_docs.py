@@ -44,12 +44,62 @@ def create_pptx():
     
     # Slides
     slides_content = [
-        ("Project Overview", ["Problem statement: Understanding and predicting disease spread.", "Deliverables achieved: Simulation, ML Models, Dashboard."]),
-        ("Dataset Generation & Analysis", ["Dataset generated using SIR model + noise.", "Includes Stringency Index and Testing Rates.", "Key insights extracted via Exploratory Data Analysis."]),
-        ("Simulation Methodology", ["Utilizes the SIR (Susceptible-Infectious-Recovered) Model.", "Demonstrates how diseases spread over time.", "Interactive parameters: Transmission rate and recovery rate."]),
-        ("Machine Learning Predictions", ["Three models built to predict new cases.", "1. Linear Regression (Baseline)", "2. Random Forest", "3. Gradient Boosting", "Predicts based on 7-day history and external factors."]),
-        ("Interactive Demo", ["Streamlit Dashboard provides a live demonstration.", "Allows adjusting parameters and seeing real-time updates.", "Compares live model predictions."]),
-        ("Conclusion", ["Successfully integrated simulation and ML into a dashboard.", "Fulfills all CLO.3 and CLO.4 requirements.", "Q&A"])
+        ("Introduction & Problem Statement", [
+            "Understanding the rapid spread of infectious diseases.",
+            "The need for computational models to predict and mitigate outbreaks.",
+            "How simulation helps policymakers in decision making."
+        ]),
+        ("Project Objectives", [
+            "Fulfill requirements for CLO.3 and CLO.4.",
+            "Build a mathematical simulation of disease dynamics.",
+            "Integrate Machine Learning to predict future trends based on historical data."
+        ]),
+        ("Theoretical Background: The SIR Model", [
+            "Susceptible (S): Population at risk of contracting the disease.",
+            "Infectious (I): Population currently infected and contagious.",
+            "Recovered (R): Population that has recovered and gained immunity.",
+            "Governed by transmission rate (beta) and recovery rate (gamma)."
+        ]),
+        ("Dataset Generation & EDA", [
+            "Generating synthetic data using an SIR model with Gaussian noise.",
+            "Features included: Stringency Index and Testing Rates.",
+            "Exploratory Data Analysis: Correlation matrices and time-series plotting."
+        ]),
+        ("Machine Learning Architecture", [
+            "Time-series forecasting using 7-day lag features.",
+            "Model 1: Linear Regression (Baseline model).",
+            "Model 2: Random Forest Regressor (Handles non-linear relationships).",
+            "Model 3: Gradient Boosting Regressor (Ensemble learning for high accuracy)."
+        ]),
+        ("Model Evaluation & Comparison", [
+            "Evaluation metrics: Mean Squared Error (MSE) and R-squared (R2).",
+            "Random Forest generally performs best on non-linear epidemic curves.",
+            "Discussion on overfitting vs. generalization."
+        ]),
+        ("Streamlit Dashboard Architecture", [
+            "Component 1: EDA Viewer (Dataframes, Matplotlib plots).",
+            "Component 2: Interactive Simulator (Adjustable transmission/recovery).",
+            "Component 3: ML Predictor Interface for future cases."
+        ]),
+        ("Interactive Simulation & Results", [
+            "Demonstration of the interactive simulation.",
+            "Visualizing 'flattening the curve' by lowering transmission rates.",
+            "Real-time updates dynamically driven by Streamlit."
+        ]),
+        ("Challenges & Limitations", [
+            "Assumptions of standard SIR (constant population, homogenous mixing).",
+            "Limitations of synthetic datasets compared to real-world noisy data.",
+            "Time-series forecasting limits using simple lag features."
+        ]),
+        ("Conclusion & Future Enhancements", [
+            "Successfully created a full-stack data science & simulation application.",
+            "Future work: Expanding to SEIR models (adding 'Exposed' compartment).",
+            "Adding deep learning (LSTMs) for more robust predictions."
+        ]),
+        ("Q&A", [
+            "Thank you for your attention!",
+            "Are there any questions?"
+        ])
     ]
     
     bullet_slide_layout = prs.slide_layouts[1]
